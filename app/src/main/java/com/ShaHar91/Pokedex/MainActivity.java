@@ -58,6 +58,7 @@ public class MainActivity extends Activity implements OnClickListener {
 //		mAdView.loadAd(request);
     }
 
+
     @Override
     public void onClick(View v) {
 
