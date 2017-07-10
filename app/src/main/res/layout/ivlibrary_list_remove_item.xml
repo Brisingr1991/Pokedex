@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/pokeSpriteIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/hpRb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/missingno_ico" />
+
+    <TextView
+        android:id="@+id/pokeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pokeSpriteIV"
+        android:paddingLeft="17dp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/genderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pokeTv"
+        android:paddingLeft="17dp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <RadioButton
+        android:id="@+id/hpRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/pokeSpriteIV"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RadioButton
+        android:id="@+id/attRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/hpRb"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RadioButton
+        android:id="@+id/defRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/attRb"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RadioButton
+        android:id="@+id/spAttRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/defRb"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RadioButton
+        android:id="@+id/spDefRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/spAttRb"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RadioButton
+        android:id="@+id/speedRb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeTv"
+        android:layout_toRightOf="@+id/spDefRb"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <CheckBox
+        android:id="@+id/removeCBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false" />
+
+</RelativeLayout>

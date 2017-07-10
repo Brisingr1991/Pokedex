@@ -1,0 +1,186 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Pokedex</string>
+    <string name="add_poke">Add</string>
+    <string name="delete_poke">Delete</string>
+    <string name="advanced_search">Advanced Search</string>
+    <string name="quick_check">Quick IV Check</string>
+    <string name="name_poke">Name:</string>
+    <string name="nat_dex">Nat. Dex:</string>
+    <string name="gender">Gender:</string>
+    <string name="egg_group1">Egg Group 1:</string>
+    <string name="egg_group2">Egg Group 2:</string>
+    <string name="nature">"Nature: "</string>
+    <string name="ability">Ability:</string>
+    <string name="iv">IV\'s:</string>
+    <string name="hp">HP</string>
+    <string name="att">Att</string>
+    <string name="def">Def</string>
+    <string name="sp_att">Sp. Att</string>
+    <string name="sp_def">Sp. Def</string>
+    <string name="speed">Speed</string>
+    <string name="confirmTitle">Delete:</string>
+    <string name="confirmMessage">Are you sure to delete this entry? After deleting it there is no way to recover it.</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="errorButton">OK</string>
+    <string name="errorTitle">Please fill in all required fields!</string>
+    <string name="titleerrorMessage">You must enter a pokémon name and click on it\'s tag so the dex number get filled.</string>
+    <string name="quick_check_how_i_use_it">"How i use the Quick IV Check:
+        
+When i have hatched a bunch of eggs, or when i got a lot off pokémon's through the Wonder Trade,
+I like to go to Kiloude City, there, inside the Poké Center, is a man that will tell you the stats of your pokémon.
+Whenever i see that a certain pokémon has a Perfect IV (31) i check the box in that stat at the place the Pokémon is in my "bag".
+Then, when i have checked all the pokémons i have on me, i go back to the PC (in the game) and mark the right IV's of the Pokémons. "</string>
+
+    <string-array name="eggGroups">
+        <item></item>
+        <item>Amorphous</item>
+        <item>Bug</item>
+        <item>Dragon</item>
+        <item>Fairy</item>
+        <item>Field</item>
+        <item>Flying</item>
+        <item>Grass</item>
+        <item>Human-Like</item>
+        <item>Mineral</item>
+        <item>Monster</item>
+        <item>Water 1</item>
+        <item>Water 2</item>
+        <item>Water 3</item>
+    </string-array>
+    <string-array name="iv_list">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="gender">
+        <item></item>
+        <item>F</item>
+        <item>M</item>
+    </string-array>
+    <string-array name="search_types">
+        <item>Name</item>
+        <item>Dex No</item>
+        <item>EV Values</item>
+        <item>Types</item>
+    </string-array>
+    <string-array name="search_move_types">
+        <item>Name</item>
+        <item>TM</item>
+        <item>Type</item>
+        <item>Attack</item>
+        <item>Accuracy</item>
+        <item>PP</item>
+    </string-array>
+    <string-array name="nature_list">
+        <item></item>
+        <item>Hardy</item>
+        <item>Lonely</item>
+        <item>Brave</item>
+        <item>Adamant</item>
+        <item>Naughty</item>
+        <item>Bold</item>
+        <item>Docile</item>
+        <item>Relaxed</item>
+        <item>Impish</item>
+        <item>Lax</item>
+        <item>Timid</item>
+        <item>Hasty</item>
+        <item>Jolly</item>
+        <item>Naïve</item>
+        <item>Modest</item>
+        <item>Mild</item>
+        <item>Quiet</item>
+        <item>Bashful</item>
+        <item>Rash</item>
+        <item>Calm</item>
+        <item>Gentle</item>
+        <item>Sassy</item>
+        <item>Careful</item>
+        <item>Quirky</item>
+    </string-array>
+    <string-array name="types">
+        <item></item>
+        <item>Normal</item>
+        <item>Fire</item>
+        <item>Water</item>
+        <item>Electric</item>
+        <item>Grass</item>
+        <item>Ice</item>
+        <item>Fight</item>
+        <item>Poison</item>
+        <item>Ground</item>
+        <item>Flying</item>
+        <item>Psychic</item>
+        <item>Bug</item>
+        <item>Rock</item>
+        <item>Ghost</item>
+        <item>Dragon</item>
+        <item>Dark</item>
+        <item>Steel</item>
+        <item>Fairy</item>
+    </string-array>
+
+    <string name="dex_no">No:</string>
+    <string name="dex_species">Species:</string>
+    <string name="dex_height">Height:</string>
+    <string name="dex_weight">Weight:</string>
+    <string name="dex_gender">Gender:</string>
+    <string name="normal">Normal</string>
+    <string name="fire">Fire</string>
+    <string name="water">Water</string>
+    <string name="electric">Electric</string>
+    <string name="grass">Grass</string>
+    <string name="ice">Ice</string>
+    <string name="fight">Fight</string>
+    <string name="poison">Poison</string>
+    <string name="ground">Ground</string>
+    <string name="caught">Caught:</string>
+    <string name="imageviewContent">Regular</string>
+    <string name="imageviewContent2">Shiny</string>
+    <string name="flying">Flying</string>
+    <string name="psychic">Psychic</string>
+    <string name="bug">Bug</string>
+    <string name="rock">Rock</string>
+    <string name="ghost">Ghost</string>
+    <string name="dragon">Dragon</string>
+    <string name="dark">Dark</string>
+    <string name="steel">Steel</string>
+    <string name="fairy">Fairy</string>
+    <string name="moves">Moves</string>
+    <string name="description">Descriptions</string>
+    <string name="abilities">Abilities:</string>
+    <string name="base_stats">Base Stats:</string>
+    <string name="loc_x">X:</string>
+    <string name="loc_y">Y:</string>
+    <string name="desc_x">X:</string>
+    <string name="desc_y">Y:</string>
+    <string name="header_typeChart">Choose the defending Pokémon\'s type:</string>
+    <string name="library">IV Library</string>
+    <string name="dex">Pokédex</string>
+    <string name="abilitiesBtn">Abilities</string>
+    <string name="type_chartBtn">Type Chart</string>
+    <string name="about_text">"Pokedex/IVLibrary is an unofficial utility App to be used for informational and entertainment purposes only. Pokedex/IVLibrary is in no way affiliated with Nintendo. Pokémon is a registered trademark of Nintendo.
+
+Pokémon © 2002-2014 Pokémon. © 1995-2014 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
+
+Pictures and Icons are ©Copyright of Serebii.net 1999-2013."</string>
+    <string name="about">About</string>
+    <string name="main_header">Main Header</string>
+    <string name="max_stat">Max Stats:</string>
+    <string name="min_stat">Min Stats:</string>
+    <string name="calc_stat">Calculated Stats:</string>
+    <string name="ivs">IV\'s (Max input is 31!):</string>
+    <string name="evs">EV\'s (Max input is 255!):</string>
+    <string name="empty">0</string>
+    <string name="nature_effect">Nature Effects:</string>
+    <string name="reset">Reset</string>
+    <string name="stats">Statistics:</string>
+    <string name="calc_iv">Calculated IV\'s:</string>
+
+</resources>

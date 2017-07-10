@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/canceldeleting"
+        app:showAsAction="always"
+        android:showAsAction="always"
+        android:title="Cancel"
+        android:titleCondensed="Cancel"></item>
+    <item
+        android:id="@+id/deletepokes"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="always"
+        android:showAsAction="always"
+        android:title="Delete"
+        android:titleCondensed="Delete"></item>
+
+</menu>

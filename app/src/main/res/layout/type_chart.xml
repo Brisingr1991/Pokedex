@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/header_typeChart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/type1Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:entries="@array/types" />
+
+        <Spinner
+            android:id="@+id/type2Sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:entries="@array/types" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerNoPokes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:text="Number of Pokémons:"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/noPokes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/containerLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/normalTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/normal_button_border"
+                    android:text="@string/normal"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/fireTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/fire_button_border"
+                    android:text="@string/fire"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/waterTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/water_button_border"
+                    android:text="@string/water"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/electricTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/electric_button_border"
+                    android:text="@string/electric"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/grassTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/grass_button_border"
+                    android:text="@string/grass"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/iceTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ice_button_border"
+                    android:text="@string/ice"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/fightTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/fight_button_border"
+                    android:text="@string/fight"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/poisonTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/poison_button_border"
+                    android:text="@string/poison"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/groundTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ground_button_border"
+                    android:text="@string/ground"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/normalXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fireXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/waterXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/electricXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/grassXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/iceXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fightXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/poisonXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/groundXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/flyingTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/flying_button_border"
+                    android:text="@string/flying"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/psychicTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/psychic_button_border"
+                    android:text="@string/psychic"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/bugTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bug_button_border"
+                    android:text="@string/bug"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/rockTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rock_button_border"
+                    android:text="@string/rock"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/ghostTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ghost_button_border"
+                    android:text="@string/ghost"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/dragonTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dragon_button_border"
+                    android:text="@string/dragon"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/darkTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/dark_button_border"
+                    android:text="@string/dark"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/steelTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/steel_button_border"
+                    android:text="@string/steel"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/fairyTv"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/fairy_button_border"
+                    android:text="@string/fairy"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/flyingXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/psychicXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bugXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/rockXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ghostXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dragonXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/darkXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/steelXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fairyXTv"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="5dp"-->
+    <!--android:background="@color/material_blue_grey_900"/>-->
+
+    <!--<com.google.android.gms.ads.AdView-->
+    <!--android:id="@+id/adView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--ads:adSize="SMART_BANNER"-->
+    <!--ads:adUnitId="@string/ad_type_chart"/>-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>
+

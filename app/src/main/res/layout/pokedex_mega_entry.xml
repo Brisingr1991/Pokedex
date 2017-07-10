@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dexScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/notesMegaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/textview_border"
+                android:padding="5dp"
+                android:text="proceed with caution" />
+
+            <TextView
+                android:id="@+id/name_mega_dexTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Bulba"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pokeMegaDrawable"
+                    style="@style/PokeTextView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/imageviewContent"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/missingno" />
+
+                <ImageView
+                    android:id="@+id/pokeMegaDrawable2"
+                    style="@style/PokeTextView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/imageviewContent2"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/missingno" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/itemTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/checkBox1"
+                    android:text="@string/caught"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/type1MegaBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="2dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/type2MegaBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="2dp"
+                    android:layout_toRightOf="@+id/type1MegaBtn"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="5">
+
+                <TableRow
+                    android:id="@+id/moveRow0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_no"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_species"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_height"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_weight"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_gender"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/moveRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/dex_Mega_natNoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/dex_Mega_speciesTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/height_Mega_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/weight_Mega_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/gender_Mega_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+                </TableRow>
+            </TableLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/normal_button_border"
+                            android:text="@string/normal"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fire_button_border"
+                            android:text="@string/fire"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/water_button_border"
+                            android:text="@string/water"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/electric_button_border"
+                            android:text="@string/electric"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/grass_button_border"
+                            android:text="@string/grass"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ice_button_border"
+                            android:text="@string/ice"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fight_button_border"
+                            android:text="@string/fight"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/poison_button_border"
+                            android:text="@string/poison"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ground_button_border"
+                            android:text="@string/ground"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/dexnormalMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfireMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexwaterMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexelectricMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexgrassMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexiceMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfightMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexpoisonMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexgroundMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:focusable="true"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/flying_button_border"
+                            android:text="@string/flying"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/psychic_button_border"
+                            android:text="@string/psychic"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/bug_button_border"
+                            android:text="@string/bug"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/rock_button_border"
+                            android:text="@string/rock"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ghost_button_border"
+                            android:text="@string/ghost"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/dragon_button_border"
+                            android:text="@string/dragon"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/dark_button_border"
+                            android:text="@string/dark"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/steel_button_border"
+                            android:text="@string/steel"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fairy_button_border"
+                            android:text="@string/fairy"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/dexflyingMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexpsychicMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexbugMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexrockMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexghostMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexdragonMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexdarkMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexsteelMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfairyMegaXTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                tools:ignore="TooManyViews">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/base_stats"
+                        android:textStyle="bold" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/hpMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/attMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/defMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/spAttMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/spDefMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/speedMegaProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abilities"
+                        android:textStyle="bold" />
+
+                    <ListView
+                        android:id="@+id/list1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="NestedScrolling"></ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mega2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/notesMega2Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/textview_border"
+                android:padding="5dp"
+                android:text="proceed with caution" />
+
+            <TextView
+                android:id="@+id/name_mega2_dexTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Bulba"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pokeMega2Drawable"
+                    style="@style/PokeTextView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/imageviewContent"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/missingno" />
+
+                <ImageView
+                    android:id="@+id/pokeMega2Drawable2"
+                    style="@style/PokeTextView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/imageviewContent2"
+                    android:padding="5dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/missingno" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/checkBox2"
+                    android:text="@string/caught"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/type1Mega2Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="2dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/type2Mega2Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="2dp"
+                    android:layout_toRightOf="@+id/type1Mega2Btn"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="5">
+
+                <TableRow
+                    android:id="@+id/moveRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_no"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_species"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_height"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_weight"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/dex_gender"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/moveRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/dex_Mega2_natNoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/dex_Mega2_speciesTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/height_Mega2_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/weight_Mega2_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+
+                    <TextView
+                        android:id="@+id/gender_Mega2_dexTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp" />
+                </TableRow>
+            </TableLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/normal_button_border"
+                            android:text="@string/normal"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fire_button_border"
+                            android:text="@string/fire"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/water_button_border"
+                            android:text="@string/water"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/electric_button_border"
+                            android:text="@string/electric"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/grass_button_border"
+                            android:text="@string/grass"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ice_button_border"
+                            android:text="@string/ice"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fight_button_border"
+                            android:text="@string/fight"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/poison_button_border"
+                            android:text="@string/poison"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ground_button_border"
+                            android:text="@string/ground"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/dexnormalMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfireMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexwaterMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexelectricMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexgrassMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexiceMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfightMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexpoisonMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexgroundMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:focusable="true"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:height="30dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/flying_button_border"
+                            android:text="@string/flying"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/psychic_button_border"
+                            android:text="@string/psychic"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/bug_button_border"
+                            android:text="@string/bug"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/rock_button_border"
+                            android:text="@string/rock"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/ghost_button_border"
+                            android:text="@string/ghost"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/dragon_button_border"
+                            android:text="@string/dragon"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/dark_button_border"
+                            android:text="@string/dark"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/steel_button_border"
+                            android:text="@string/steel"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+
+                        <Button
+                            android:layout_width="55dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/fairy_button_border"
+                            android:text="@string/fairy"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="ButtonStyle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/dexflyingMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexpsychicMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexbugMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexrockMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexghostMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexdragonMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexdarkMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexsteelMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/dexfairyMega2XTv"
+                            android:layout_width="55dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="2dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                tools:ignore="TooManyViews">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/base_stats"
+                        android:textStyle="bold" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/hpMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/attMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/defMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/spAttMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/spDefMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+
+                    <com.ShaHar91.Pokedex.CustomViews.TextProgressBar
+                        android:id="@+id/speedMega2ProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="118dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:minHeight="20dp"
+                        android:padding="2dp"
+                        android:progressDrawable="@drawable/progressbar"
+                        app:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abilities"
+                        android:textStyle="bold" />
+
+                    <ListView
+                        android:id="@+id/list2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="NestedScrolling"></ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
