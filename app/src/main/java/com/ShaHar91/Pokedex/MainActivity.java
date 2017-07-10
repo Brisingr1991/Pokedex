@@ -51,6 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
         items.setOnClickListener(this);
         items.setVisibility(View.GONE);
 
+
 //        AdView mAdView = (AdView) findViewById(R.id.adView);
 //		AdRequest request = new AdRequest.Builder()
 //				.addTestDevice("86D27541E8C4847FEDB6814DB793E1C0")
